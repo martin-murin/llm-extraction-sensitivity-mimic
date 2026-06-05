@@ -1,5 +1,7 @@
 # MIMIC Notes LLM Extraction Code Release
 
+[![arXiv](https://img.shields.io/badge/arXiv-2606.05970-b31b1b.svg)](https://arxiv.org/abs/2606.05970) [![DOI](https://zenodo.org/badge/1260435171.svg)](https://doi.org/10.5281/zenodo.20558515)
+
 This repository contains the analysis code for the arXiv paper **Measuring the
 sensitivity of LLM-based structured extraction from MIMIC-IV discharge summaries**,
 `arXiv:2606.05970`.
@@ -58,15 +60,16 @@ OPENAI_MODEL=<MODEL_SNAPSHOT>
 - `paper/sources/`: manuscript and supplement markdown sources with claim
   placeholders.
 
-## Citations
+## Citation
 
-Users should cite the official PhysioNet records for the exact versions accessed,
-including:
+If you use this code, please cite both the paper and this software archive, and cite the
+underlying MIMIC datasets per the PhysioNet data use agreement.
 
-- MIMIC-IV
-- MIMIC-IV v3.1
-- MIMIC-IV-Note v2.2
-- PhysioNet
+Paper (arXiv): https://doi.org/10.48550/arXiv.2606.05970
+Code (Zenodo): https://doi.org/10.5281/zenodo.20558515
+
+This repository contains analysis code only. MIMIC-IV v3.1 and MIMIC-IV-Note v2.2 are not
+included and must be obtained by credentialed users via PhysioNet under the data use agreement.
 
 ## License
 
