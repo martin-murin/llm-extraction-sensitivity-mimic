@@ -1,6 +1,6 @@
 # MIMIC Notes LLM Extraction Code Release
 
-[![arXiv](https://img.shields.io/badge/arXiv-2606.05970-b31b1b.svg)](https://arxiv.org/abs/2606.05970) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20558515.svg)](https://doi.org/10.5281/zenodo.20558515)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.05970-b31b1b.svg)](https://arxiv.org/abs/2606.05970) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20558516.svg)](https://doi.org/10.5281/zenodo.20558515)
 
 This repository contains the analysis code for the arXiv paper **Measuring the
 sensitivity of LLM-based structured extraction from MIMIC-IV discharge summaries**,
