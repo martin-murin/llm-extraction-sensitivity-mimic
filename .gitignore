@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Test/coverage artifacts
+.coverage
+htmlcov/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Data directories are gitignored by default...
+data/**/*
+docs/figures/**/*
+
+# ...except splits, which are the methodology anchor
+!data/splits/
+!data/splits/**
+
+# Keep gitkeep markers in ignored trees
+!data/**/.gitkeep
+
+# Runtime logs (keep gitkeep markers)
+logs/**/*
+!logs/**/.gitkeep
+
+# Generated reports and artifacts
+codex_outputs/**/*.md
+*.pkl
+*.parquet
+
+# Paper artifacts
+paper/build/
+paper/figures
+*.aux
+*.log
+*.out
+*.toc
+
+# Agents
+.codex/
+codex-export/
+claude-export/

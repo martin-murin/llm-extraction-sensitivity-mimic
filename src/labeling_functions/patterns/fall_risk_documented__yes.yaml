@@ -1,0 +1,24 @@
+field_name: fall_risk_documented
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:05:43Z'
+n_source_notes: 24
+specification_source: bootstrap + clinical_lead_review
+bootstrap_run_id: bootstrap_extension_v1
+reviewed_at_utc: '2026-04-24T15:05:43Z'
+regex_patterns:
+- \bfall risk\b
+- \bhigh fall risk\b
+compound_patterns:
+- all_of:
+  - fell|fall
+  - at home|mechanical|witnessed|unwitnessed
+  window_chars: 20
+  description: fall-event with contextual modifier
+embedding_seed_phrases:
+- high fall risk documented during hospitalization
+- presented after mechanical fall
+- recurrent falls at home noted
+- fall precautions ordered on the ward
+- anticoagulation deferred because of fall risk
+embedding_threshold: 0.65

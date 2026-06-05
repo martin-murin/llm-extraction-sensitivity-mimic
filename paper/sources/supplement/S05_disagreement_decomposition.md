@@ -1,0 +1,7 @@
+# TriState Disagreement Decomposition
+
+This section accompanies Section~\ref{sec-results-soft-disagreement}, decomposing cross-variant disagreement on the 17 TriState clinical documentation flags into the soft `no`-versus-`not_documented` component and the hard `yes`-versus-not-yes component. Table~\ref{tbl:tristate-fields} lists the 17 TriState fields with their definitions used throughout the schema. Figure~\ref{fig:disagreement-decomposition} reports the share of disagreement cases attributable to each component on the pooled small-model cross-variant sample ($n = {{cross_variant_pooled_n}}$ shared notes), and quantifies the fraction of disagreement that dissolves under post-hoc binary collapse (Section~\ref{sec-binary-collapse}).
+
+## Disagreement Decomposition
+
+![**Decomposition of cross-variant disagreement on TriState fields by disagreement type.** Stacked bars show the share of disagreements occurring on the soft `no`-vs-`not_documented` axis versus the hard `yes`-vs-not-yes axis, on the pooled small-model cross-variant sample. Soft disagreement totals {{disagreement_soft_pct:.1f}}\% of disagreement cases; hard yes-vs-no flips total {{disagreement_hard_pct:.1f}}\%. Binary collapse removes the soft component, dissolving {{disagreement_dissolved_pct:.1f}}\% of the disagreement count. Pooled cross-variant sample, $n = {{cross_variant_pooled_n}}$.](../figures/supplement/paper_fig_S04_disagreement_decomposition_dual.pdf){#fig:disagreement-decomposition width=\linewidth}

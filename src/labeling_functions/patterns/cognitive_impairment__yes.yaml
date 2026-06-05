@@ -1,0 +1,21 @@
+field_name: cognitive_impairment
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:05:43Z'
+n_source_notes: 14
+specification_source: bootstrap + clinical_lead_review
+bootstrap_run_id: bootstrap_extension_v1
+reviewed_at_utc: '2026-04-24T15:05:43Z'
+regex_patterns:
+- \bdementia\b
+- \bAlzheimer('s)?\b
+- \bMCI\b
+- \bmild cognitive impairment\b
+- \bbaseline (confusion|dementia)\b
+embedding_seed_phrases:
+- baseline dementia documented in past medical history
+- mild cognitive impairment at baseline
+- known Alzheimer disease before this admission
+- chronic cognitive decline noted by family
+- baseline confusion from dementia
+embedding_threshold: 0.65

@@ -1,0 +1,20 @@
+field_name: aki_present
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:05:43Z'
+n_source_notes: 31
+specification_source: bootstrap + clinical_lead_review
+bootstrap_run_id: bootstrap_extension_v1
+reviewed_at_utc: '2026-04-24T15:05:43Z'
+regex_patterns:
+- \bAKI\b
+- \bacute kidney injury\b
+- \bacute renal failure\b
+- \bARF\b
+embedding_seed_phrases:
+- acute kidney injury documented during admission
+- developed AKI during hospital course
+- acute renal failure improved before discharge
+- creatinine rose above baseline consistent with AKI
+- hospital course complicated by AKI
+embedding_threshold: 0.65

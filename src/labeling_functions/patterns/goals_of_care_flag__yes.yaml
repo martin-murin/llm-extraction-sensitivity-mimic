@@ -1,0 +1,21 @@
+field_name: goals_of_care_flag
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:05:43Z'
+n_source_notes: 11
+specification_source: bootstrap + clinical_lead_review
+bootstrap_run_id: bootstrap_extension_v1
+reviewed_at_utc: '2026-04-24T15:05:43Z'
+regex_patterns:
+- \bgoals[- ]of[- ]care\b
+- \bGOC\b
+- \bfamily meeting\b
+- \bcomfort[- ]focused\b
+- \bhospice\b
+embedding_seed_phrases:
+- goals of care discussion documented with family
+- family meeting held to discuss prognosis and care goals
+- transitioned to comfort focused care
+- hospice plan discussed during admission
+- code status clarified after goals of care discussion
+embedding_threshold: 0.65

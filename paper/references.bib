@@ -1,0 +1,372 @@
+% References for the mimic-notes-llm-extraction methodology paper.
+% Citation keys follow the pattern: lastname+year+keyword
+% Cite in markdown as \cite{key}; pandoc will convert to LaTeX \cite{key}.
+
+% =============================================================================
+% Closely related work: LLM-based clinical structured extraction
+% =============================================================================
+
+@article{huang2024chatgpt,
+  author    = {Huang, Jingwei and Yang, Donghan M. and Rong, Ruichen and Nezafati, Kuroush and Treager, Colin and Chi, Zhikai and Wang, Shidan and Cheng, Xian and Guo, Yujia and Klesse, Laura J. and Xiao, Guanghua and Peterson, Eric D. and Zhan, Xiaowei and Xie, Yang},
+  title     = {A critical assessment of using {ChatGPT} for extracting structured data from clinical notes},
+  journal   = {npj Digital Medicine},
+  volume    = {7},
+  number    = {1},
+  pages     = {106},
+  year      = {2024},
+  doi       = {10.1038/s41746-024-01079-8},
+  pmid      = {38693429}
+}
+
+@article{hein2025iterative,
+  author    = {Hein, David and Christie, Alana and Holcomb, Michael and Xie, Bingqing and Jain, A. J. and Vento, Joseph and Rakheja, Neil and Shakur, Ameer Hamza and Christley, Scott and Cowell, Lindsay G. and Brugarolas, James and Jamieson, Andrew R. and Kapur, Payal},
+  title     = {Iterative refinement and goal articulation to optimize large language models for clinical information extraction},
+  journal   = {npj Digital Medicine},
+  volume    = {8},
+  number    = {1},
+  pages     = {301},
+  year      = {2025},
+  doi       = {10.1038/s41746-025-01686-z},
+  pmid      = {40410408}
+}
+
+@article{lopez2025clear,
+  author    = {Lopez, Ivan and Swaminathan, Akshay and Vedula, Karthik and Narayanan, Sanjana and Nateghi Haredasht, Fateme and Ma, Stephen P. and Liang, April S. and Tate, Steven and Maddali, Manoj and Gallo, Robert Joseph and Shah, Nigam H. and Chen, Jonathan H.},
+  title     = {Clinical entity augmented retrieval for clinical information extraction},
+  journal   = {npj Digital Medicine},
+  volume    = {8},
+  number    = {1},
+  pages     = {45},
+  year      = {2025},
+  doi       = {10.1038/s41746-024-01377-1},
+  pmid      = {39828800}
+}
+
+@article{sivarajkumar2024prompting,
+  author    = {Sivarajkumar, Sonish and Kelley, Mark and Samolyk-Mazzanti, Alyssa and Visweswaran, Shyam and Wang, Yanshan},
+  title     = {An Empirical Evaluation of Prompting Strategies for Large Language Models in Zero-Shot Clinical Natural Language Processing: Algorithm Development and Validation Study},
+  journal   = {JMIR Medical Informatics},
+  volume    = {12},
+  pages     = {e55318},
+  year      = {2024},
+  doi       = {10.2196/55318},
+  pmid      = {38587879}
+}
+
+@article{hu2024improving,
+  author    = {Hu, Yan and Chen, Qingyu and Du, Jingcheng and Peng, Xueqing and Keloth, Vipina Kuttichi and Zuo, Xu and Zhou, Yujia and Li, Zehan and Jiang, Xiaoqian and Lu, Zhiyong and Roberts, Kirk and Xu, Hua},
+  title     = {Improving large language models for clinical named entity recognition via prompt engineering},
+  journal   = {Journal of the American Medical Informatics Association},
+  volume    = {31},
+  number    = {9},
+  pages     = {1812--1820},
+  year      = {2024},
+  doi       = {10.1093/jamia/ocad259},
+  pmid      = {38281112}
+}
+
+@article{hu2026information,
+  author    = {Hu, Yan and Zuo, Xu and Zhou, Yujia and Peng, Xueqing and Huang, Jimin and Keloth, Vipina K. and Zhang, Vincent J. and Weng, Ruey-Ling and Shyr, Cathy and Chen, Qingyu and Jiang, Xiaoqian and Roberts, Kirk E. and Xu, Hua},
+  title     = {Information extraction from clinical notes: are we ready to switch to large language models?},
+  journal   = {Journal of the American Medical Informatics Association},
+  volume    = {33},
+  number    = {3},
+  pages     = {553--562},
+  year      = {2026},
+  doi       = {10.1093/jamia/ocaf213},
+  pmid      = {41533750}
+}
+
+% =============================================================================
+% MIMIC-IV dataset and PhysioNet
+% =============================================================================
+
+@misc{johnson2024mimiciv,
+  author    = {Johnson, Alistair and Bulgarelli, Lucas and Pollard, Tom and Gow, Brian and Moody, Benjamin and Horng, Steven and Celi, Leo Anthony and Mark, Roger},
+  title     = {{MIMIC-IV} (version 3.1)},
+  howpublished = {PhysioNet},
+  year      = {2024},
+  month     = {oct},
+  doi       = {10.13026/kpb9-mt58},
+  url       = {https://doi.org/10.13026/kpb9-mt58}
+}
+
+@article{johnson2023mimiciv,
+  author    = {Johnson, Alistair E. W. and Bulgarelli, Lucas and Shen, Lu and Gayles, Alvin and Shammout, Ayad and Horng, Steven and Pollard, Tom J. and Hao, Sicheng and Moody, Benjamin and Gow, Brian and Lehman, Li-Wei H. and Celi, Leo A. and Mark, Roger G.},
+  title     = {{MIMIC-IV}, a freely accessible electronic health record dataset},
+  journal   = {Scientific Data},
+  volume    = {10},
+  number    = {1},
+  pages     = {1},
+  year      = {2023},
+  doi       = {10.1038/s41597-022-01899-x},
+  pmid      = {36596836}
+}
+
+@article{johnson2023mimicnote,
+  author = {Johnson, Alistair and Pollard, Tom and Horng, Steven and Celi, Leo Anthony and Mark, Roger},
+  title = {{MIMIC-IV-Note: Deidentified free-text clinical notes}},
+  journal = {{PhysioNet}},
+  year = {2023},
+  month = jan,
+  note = {Version 2.2},
+  doi = {10.13026/1n74-ne17},
+  url = {https://doi.org/10.13026/1n74-ne17}
+}
+
+@article{goldberger2000physionet,
+  author    = {Goldberger, Ary L. and Amaral, Luis A. N. and Glass, Leon and Hausdorff, Jeffrey M. and Ivanov, Plamen Ch. and Mark, Roger G. and Mietus, Joseph E. and Moody, George B. and Peng, Chung-Kang and Stanley, H. Eugene},
+  title     = {{PhysioBank, PhysioToolkit, and PhysioNet}: Components of a new research resource for complex physiologic signals},
+  journal   = {Circulation},
+  volume    = {101},
+  number    = {23},
+  pages     = {e215--e220},
+  year      = {2000}
+}
+
+@misc{yang2026medicalbench,
+  author    = {Yang, Zhichao and Lyng, Gregory and Batra, Sanjit and Tillman, Robert},
+  title     = {{MIMIC-IV-Ext-MedicalBench}: Evaluating Large Language Models Towards Improved Medical Concept Extraction (version 1.0.0)},
+  howpublished = {PhysioNet},
+  year      = {2026},
+  doi       = {10.13026/j98m-g356},
+  url       = {https://doi.org/10.13026/j98m-g356}
+}
+
+% =============================================================================
+% Prompt sensitivity, consistency, and disagreement-aware annotation
+% =============================================================================
+
+@inproceedings{errica2025quantifying,
+  author    = {Errica, Federico and Siracusano, Giuseppe and Sanvito, Davide and Bifulco, Roberto},
+  title     = {What Did {I} Do Wrong? {Quantifying} {LLMs}' Sensitivity and Consistency to Prompt Engineering},
+  booktitle = {Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL 2025)},
+  year      = {2025},
+  eprint    = {2406.12334},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2406.12334}
+}
+
+@inproceedings{razavi2025benchmarking,
+  author    = {Razavi, Amirhossein and Soltangheis, Mina and Arabzadeh, Negar and Salamat, Sara and Zihayat, Morteza and Bagheri, Ebrahim},
+  title     = {Benchmarking Prompt Sensitivity in Large Language Models},
+  booktitle = {Advances in Information Retrieval: 47th European Conference on Information Retrieval (ECIR 2025)},
+  year      = {2025},
+  eprint    = {2502.06065},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2502.06065}
+}
+
+@misc{xu2026beyond,
+  author    = {Xu, Yinuo and Jurgens, David},
+  title     = {Beyond Consensus: Perspectivist Modeling and Evaluation of Annotator Disagreement in {NLP}},
+  year      = {2026},
+  eprint    = {2601.09065},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2601.09065}
+}
+
+@misc{rair2026interpretable,
+  author    = {Rair, Nisrine and Goupil, Alban and Vrabie, Valeriu and Chochoy, Emmanuel},
+  title     = {Beyond Black-Box Labels: Interpretable Criteria for Diagnosing Subjective {NLP} Tasks},
+  year      = {2026},
+  eprint    = {2604.17022},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  doi       = {10.48550/arXiv.2604.17022},
+  url       = {https://arxiv.org/abs/2604.17022}
+}
+
+% =============================================================================
+% Inter-rater agreement methodology
+% =============================================================================
+
+@article{mchugh2012kappa,
+  author    = {McHugh, Mary L.},
+  title     = {Interrater reliability: the kappa statistic},
+  journal   = {Biochemia Medica},
+  volume    = {22},
+  number    = {3},
+  pages     = {276--282},
+  year      = {2012}
+}
+
+@misc{james2026consensus,
+  author    = {James, Joseph},
+  title     = {Counting on Consensus: Selecting the Right Inter-annotator Agreement Metric for {NLP} Annotation and Evaluation},
+  year      = {2026},
+  eprint    = {2603.06865},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2603.06865}
+}
+
+% =============================================================================
+% Autonomous prompt optimization
+% =============================================================================
+
+@misc{ye2023pe2,
+  author    = {Ye, Qinyuan and Axmed, Maxamed and Pryzant, Reid and Khani, Fereshte},
+  title     = {Prompt Engineering a Prompt Engineer},
+  year      = {2023},
+  eprint    = {2311.05661},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2311.05661}
+}
+
+@misc{wu2025automedprompt,
+  author    = {Wu, Sean and Koo, Michael and Scalzo, Fabien and Kurtz, Ira},
+  title     = {{AutoMedPrompt}: A New Framework for Optimizing {LLM} Medical Prompts Using Textual Gradients},
+  year      = {2025},
+  eprint    = {2502.15944},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2502.15944}
+}
+
+% =============================================================================
+% Weak supervision: Snorkel and clinical applications
+% =============================================================================
+
+@article{ratner2017snorkel,
+  author    = {Ratner, Alexander and Bach, Stephen H. and Ehrenberg, Henry and Fries, Jason and Wu, Sen and R{\'e}, Christopher},
+  title     = {Snorkel: rapid training data creation with weak supervision},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {11},
+  number    = {3},
+  pages     = {269--282},
+  year      = {2017},
+  month     = {nov},
+  doi       = {10.14778/3157794.3157797},
+  url       = {https://doi.org/10.14778/3157794.3157797}
+}
+
+@misc{smith2022prompting,
+  author    = {Smith, Ryan and Fries, Jason A. and Hancock, Braden and Bach, Stephen H.},
+  title     = {Language Models in the Loop: Incorporating Prompting into Weak Supervision},
+  year      = {2022},
+  eprint    = {2205.02318},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2205.02318}
+}
+
+@article{fries2021trove,
+  author    = {Fries, Jason A. and Steinberg, Ethan and Khattar, Saelig and Fleming, Scott L. and Posada, Jose and Callahan, Alison and Shah, Nigam H.},
+  title     = {Ontology-driven weak supervision for clinical entity classification in electronic health records},
+  journal   = {Nature Communications},
+  volume    = {12},
+  number    = {1},
+  pages     = {2017},
+  year      = {2021},
+  doi       = {10.1038/s41467-021-22328-4},
+  pmid      = {33795682}
+}
+
+@article{hsu2025weak,
+  author    = {Hsu, Enshuo and Roberts, Kirk},
+  title     = {Leveraging large language models for knowledge-free weak supervision in clinical natural language processing},
+  journal   = {Scientific Reports},
+  volume    = {15},
+  number    = {1},
+  pages     = {8241},
+  year      = {2025},
+  doi       = {10.1038/s41598-024-68168-2},
+  pmid      = {40064991}
+}
+
+@article{consoli2026sdoh,
+  author    = {Consoli, Bernardo and Wang, Haoyang and Wu, Xizhi and Wang, Song and Zhao, Xinyu and Wang, Yanshan and Rousseau, Justin and Hartvigsen, Tom and Shen, Li and Wu, Huanmei and Peng, Yifan and Long, Qi and Chen, Tianlong and Ding, Ying},
+  title     = {{SDoH-GPT}: using large language models to extract social determinants of health},
+  journal   = {Journal of the American Medical Informatics Association},
+  volume    = {33},
+  number    = {1},
+  pages     = {67--78},
+  year      = {2026},
+  doi       = {10.1093/jamia/ocaf094},
+  pmid      = {40493530}
+}
+
+% =============================================================================
+% Assertion status and clinical negation
+% =============================================================================
+
+@article{uzuner2011i2b2,
+  author    = {Uzuner, {\"O}zlem and South, Brett R. and Shen, Shuying and DuVall, Scott L.},
+  title     = {2010 {i2b2/VA} challenge on concepts, assertions, and relations in clinical text},
+  journal   = {Journal of the American Medical Informatics Association},
+  volume    = {18},
+  number    = {5},
+  pages     = {552--556},
+  year      = {2011},
+  doi       = {10.1136/amiajnl-2011-000203},
+  pmid      = {21685143}
+}
+
+@article{harkema2009context,
+  author    = {Harkema, Henk and Dowling, John N. and Thornblade, Tyler and Chapman, Wendy W.},
+  title     = {{ConText}: An algorithm for determining negation, experiencer, and temporal status from clinical reports},
+  journal   = {Journal of Biomedical Informatics},
+  volume    = {42},
+  number    = {5},
+  pages     = {839--851},
+  year      = {2009},
+  doi       = {10.1016/j.jbi.2009.05.002},
+  pmid      = {19435614}
+}
+
+% =============================================================================
+% Adjacent clinical extraction work (radiology, oncology)
+% =============================================================================
+
+@article{leguellec2024radiology,
+  author    = {Le Guellec, Bastien and Lef{\`e}vre, Alexandre and Geay, Charlotte and Shorten, Lucas and Bruge, Cyril and Hacein-Bey, Lotfi and Amouyel, Philippe and Pruvo, Jean-Pierre and Kuchcinski, Gregory and Hamroun, Aghiles},
+  title     = {Performance of an Open-Source Large Language Model in Extracting Information from Free-Text Radiology Reports},
+  journal   = {Radiology: Artificial Intelligence},
+  volume    = {6},
+  number    = {4},
+  pages     = {e230364},
+  year      = {2024},
+  doi       = {10.1148/ryai.230364},
+  pmid      = {38717292}
+}
+
+@article{nowak2025radiology,
+  author    = {Nowak, Sebastian and Wulff, Benjamin and Layer, Yannik C. and Theis, Maike and Isaak, Alexander and Salam, Babak and Block, Wolfgang and Kuetting, Daniel and Pieper, Claus C. and Luetkens, Julian A. and Attenberger, Ulrike and Sprinkart, Alois M.},
+  title     = {Privacy-ensuring Open-weights Large Language Models Are Competitive with Closed-weights {GPT-4o} in Extracting Chest Radiography Findings from Free-Text Reports},
+  journal   = {Radiology},
+  volume    = {314},
+  number    = {1},
+  pages     = {e240895},
+  year      = {2025},
+  doi       = {10.1148/radiol.240895},
+  pmid      = {39807977}
+}
+
+@article{zhang2025mcodegpt,
+  author    = {Zhang, Kai and Huang, Tongtong and Malin, Bradley A. and Osterman, Travis and Long, Qi and Jiang, Xiaoqian},
+  title     = {Introducing {mCODEGPT} as a zero-shot information extraction from clinical free text data tool for cancer research},
+  journal   = {Communications Medicine},
+  volume    = {5},
+  number    = {1},
+  pages     = {422},
+  year      = {2025},
+  doi       = {10.1038/s43856-025-01116-x},
+  pmid      = {41093969}
+}
+
+@article{liu2025strata,
+  author    = {Liu, Longchao and Lian, Long and Hao, Yiyan and Pace, Aidan and Kim, Elaine and Homsi, Nour and Pershad, Yash and Lai, Liheng and Gracie, Thomas and Kishtagari, Ashwin and Carroll, Peter R. and Bick, Alexander G. and Odisho, Anobel Y. and Chung, Maggie and Yala, Adam},
+  title     = {Human level information extraction from clinical reports with finetuned language models},
+  journal   = {Scientific Reports},
+  volume    = {15},
+  number    = {1},
+  pages     = {45239},
+  year      = {2025},
+  doi       = {10.1038/s41598-025-28767-z},
+  pmid      = {41286063}
+}

@@ -1,0 +1,14 @@
+field_name: palliative_care_consult
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:02:16Z'
+seed_phrases_reviewed_at_utc: '2026-04-24T15:02:16Z'
+n_source_notes: 0
+specification_source: clinical_lead_review
+regex_patterns:
+- \bpalliative care\b
+embedding_seed_phrases:
+- Palliative Care saw the patient...
+- Patient decided to enroll in hospice
+- Palliative care helped to arranged hospice
+embedding_threshold: 0.65

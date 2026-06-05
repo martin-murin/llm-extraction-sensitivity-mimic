@@ -1,0 +1,12 @@
+field_name: cardiac_rehab_referred
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: 2026-04-24 11:50:13+00:00
+n_source_notes: 0
+specification_source: clinical_lead_review
+regex_patterns:
+- \bcardiac rehab(ilitation)?\b
+embedding_seed_phrases:
+- cardiac rehabilitation referral ordered
+- referred to outpatient cardiac rehab program
+- enrollment in cardiac rehab

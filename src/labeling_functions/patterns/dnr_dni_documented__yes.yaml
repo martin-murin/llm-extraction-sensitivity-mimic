@@ -1,0 +1,20 @@
+field_name: dnr_dni_documented
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:02:16Z'
+seed_phrases_reviewed_at_utc: '2026-04-24T15:02:16Z'
+n_source_notes: 0
+specification_source: clinical_lead_review
+regex_patterns:
+- \bDNR\s*/\s*DNI\b
+- \bDo Not Resuscitate\b
+- \bcomfort measures only\b
+embedding_seed_phrases:
+- 'Code Status: DNR/DNI.'
+- expressed that the patient will be DNR/DNI
+- no aggressive measures or ICU transfers (DNR/DNI documented).
+- pt DNR/DNI.
+- "\u201Cpreviously been DNR/DNI\u201D"
+- 'CODE STATUS: DNR/DNI'
+- DNR/DNI (confirmed)
+embedding_threshold: 0.65

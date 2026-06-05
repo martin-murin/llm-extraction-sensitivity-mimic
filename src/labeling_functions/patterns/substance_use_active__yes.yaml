@@ -1,0 +1,38 @@
+field_name: substance_use_active
+target_value: 'yes'
+generated_from_run_id: hand_review_v1
+generated_at_utc: '2026-04-24T15:02:16Z'
+seed_phrases_reviewed_at_utc: '2026-04-24T15:02:16Z'
+n_source_notes: 0
+specification_source: clinical_lead_review
+regex_patterns:
+- \bIVDU\b
+- \bpolysubstance\b
+- \bactive\s+(alcohol|drug|substance)\s+(use|abuse)\b
+- \bCIWA\b
+- \bopiate withdrawal\b
+- \balcohol withdrawal\b
+compound_patterns:
+- all_of:
+  - alcohol|ethanol|etoh
+  - abuse|use|consum|overdose|intox|depend
+  window_chars: 40
+  description: alcohol-token + clinical-noun within 40 chars
+- all_of:
+  - drink(er|ing|s)?
+  - daily|heavy|continues|currently|active
+  window_chars: 30
+  description: drinking + activity modifier within 30 chars
+- all_of:
+  - heroin|cocaine|fentanyl|meth|oxycodone|opioid|opiate
+  - use|abuse|dependence|active|current
+  window_chars: 40
+  description: drug-token + use-noun within 40 chars
+embedding_seed_phrases:
+- '"alcohol and narcotic detox"'
+- '"longstanding history of alcohol and heroine use"'
+- '"presented to the unit in acute withdrawal with CIWA > 10"'
+- '"drinking Vodka consistently x4-5 days"'
+- substance use active with reported drinking 1 pint vodka daily
+- EtOH intoxication, gait instability
+embedding_threshold: 0.65

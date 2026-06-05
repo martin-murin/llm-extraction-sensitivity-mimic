@@ -1,0 +1,23 @@
+# Runtime
+openai>=1.50
+pydantic>=2
+pydantic-settings>=2
+psycopg[binary]>=3
+sqlalchemy>=2
+pandas>=2
+pyarrow
+pyyaml>=6
+tenacity>=8
+python-dotenv
+tiktoken
+numpy
+snorkel>=0.9.9
+scikit-learn>=1.5
+matplotlib>=3.8
+seaborn>=0.13
+
+# Dev
+pytest>=8
+pytest-asyncio
+ruff
+mypy

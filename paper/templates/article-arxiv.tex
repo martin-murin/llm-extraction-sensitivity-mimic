@@ -1,0 +1,197 @@
+$passoptions.latex()$
+\documentclass[11pt]{article}
+
+$if(beamerarticle)$
+\usepackage{beamerarticle} % needs to be loaded first
+$endif$
+
+% Encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Layout
+\usepackage[left=1in,right=1in,top=0.75in,bottom=1in]{geometry}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\setstretch{1.15}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+\raggedbottom
+% Avoid typographic widows/orphans and awkward page breaks.
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+
+% Math
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+
+% Tables, figures, and captions
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf,margin=1em]{caption}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% Colors and links
+\usepackage{xcolor}
+\IfFileExists{orcidlink.sty}{\usepackage{orcidlink}}{}
+\newcommand{\orcidmark}[1]{%
+  \IfFileExists{orcidlink.sty}{\orcidlink{#1}}{\href{https://orcid.org/#1}{ORCID: #1}}%
+}
+
+$--
+$-- section numbering
+$--
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$endif$
+
+$fonts.latex()$
+$font-settings.latex()$
+$common.latex()$
+
+% Code block rendering
+\usepackage{fvextra}
+\fvset{
+  breaklines=true,
+  breakanywhere=true,
+  fontsize=\footnotesize
+}
+
+% Wrapped table columns and more robust line breaks in inline code spans
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+\AtBeginEnvironment{longtable}{\footnotesize\setlength{\tabcolsep}{3pt}}
+
+% Figure placement default
+\makeatletter
+\def\fps@figure{!htbp}
+\makeatother
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+$after-header-includes.latex()$
+$hypersetup.latex()$
+\hypersetup{hidelinks}
+
+$if(pdf-trailer-id)$
+
+\ifXeTeX
+\special{pdf:trailerid [ $pdf-trailer-id$ ]}
+\fi
+\ifPDFTeX
+\pdftrailerid{}
+\pdftrailer{/ID [ $pdf-trailer-id$ ]}
+\fi
+\ifLuaTeX
+\pdfvariable trailerid {[ $pdf-trailer-id$ ]}
+\fi
+$endif$
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$endif$
+
+% Tighten the first-page title block so long abstracts fit without wasting top space.
+\makeatletter
+\patchcmd{\@maketitle}{\null\vskip 2em}{\null\vskip -0.25em}{}{}
+\patchcmd{\@maketitle}{\par\vskip 1.5em}{\par\vskip 0.5em}{}{}
+\makeatother
+
+\author{$for(author)$$if(author.name)$$author.name$$if(author.affiliation)$\\$author.affiliation$$endif$$if(author.email)$\\$author.email$$endif$$else$$author$$endif$$sep$ \and $endfor$}
+\date{$date$}
+
+\begin{document}
+\pagestyle{plain}
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\maketitle
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+{
+$if(colorlinks)$
+$if(toccolor)$
+\hypersetup{linkcolor=$toccolor$}
+$endif$
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+$if(lof)$
+\listoffigures
+$endif$
+$if(lot)$
+\listoftables
+$endif$
+$if(linestretch)$
+\setstretch{$linestretch$}
+$endif$
+$if(has-frontmatter)$
+\mainmatter
+$endif$
+$body$
+
+$if(has-frontmatter)$
+\backmatter
+$endif$
+$if(nocite-ids)$
+\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+$endif$
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(has-chapters)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
